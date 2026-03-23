@@ -1,0 +1,65 @@
+[OVERLEAF LATEX CODE]-[ARTIGO 4]
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{parskip}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+urlcolor=blue,
+citecolor=black
+}
+
+\title{Resenha: \\
+\large \emph{On the Criteria To Be Used in Decomposing Systems into Modules} -- D. L. Parnas}
+\author{Pedro Carbonaro}
+\date{23/03/2026}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Introdução}
+
+A modularização de sistemas é um assunto que ganha cada vez mais destaque no desenvolvimento de software, sobretudo quando trabalhamos com projetos complexos e de grande escala. O artigo clássico de D. L. Parnas, \emph{On the Criteria To Be Used in Decomposing Systems into Modules} (1972) apresenta uma reflexão profunda e ainda extremamente atual sobre os critérios para dividir um sistema em módulos de software. Diferentemente de abordagens comuns da época, que segmentavam sistemas com base no fluxo do programa (como um fluxograma), Parnas propõe uma metodologia fundamentada na ideia de \emph{esconder decisões de design} — ou seja, organizar os módulos de forma que cada um oculte uma decisão técnica que tende a variar.
+
+\medskip
+
+\noindent\textbf{Resumo e principais contribuições}
+
+Parnas começa destacando as vantagens da modularização tradicional: facilitação da programação paralela, definição clara de interfaces, testes independentes e facilidade na manutenção. Contudo, ele argumenta que, na prática, muitos sistemas modulares são divididos simplesmente em funções sequenciais de processamento, o que nem sempre é a melhor estratégia.
+
+Ele apresenta o exemplo do sistema KWIC (Key Word In Context), uma ferramenta clássica para indexação, ilustrando duas formas distintas de decomposição: a primeira baseada em etapas do processamento (entrada, deslocamento circular, ordenação e saída), e a segunda, baseada em \emph{informação escondida}, onde os módulos representam decisões de design isoladas (como armazenamento de linhas, deslocamento e ordenação). Essa segunda abordagem oferece vantagens claras em termos de encapsulamento, independência no desenvolvimento, facilidade para mudanças locais e compreensibilidade das partes do sistema.
+
+O artigo também destaca que seguir o fluxo temporal do programa para modularização tende a criar acoplamentos desnecessários, dificultando mudanças em áreas específicas e aumentando o esforço de coordenação entre equipes de desenvolvimento. Por outro lado, a modularização orientada à ocultação da informação gera interfaces mais abstratas e menos dependentes dos detalhes internos, o que resulta em maior flexibilidade, possibilidade de reaproveitamento e manutenção facilitada.
+
+Por fim, Parnas reconhece que essa abordagem pode criar um problema de eficiência, pois o design mais abstrato pode levar a um aumento no número de chamadas entre módulos. Para sanar isso, ele sugere que os módulos não precisem corresponder necessariamente a uma única sub-rotina, e que ferramentas e montadores especiais poderiam ajudar a otimizar a implementação sem sacrificar os benefícios da modularização.
+
+\medskip
+
+\noindent\textbf{Aplicação prática em empresas contemporâneas}
+
+No cenário atual das empresas de tecnologia e desenvolvimento de software, os conceitos abordados por Parnas são ainda mais relevantes. Grandes sistemas corporativos, como plataformas de comércio eletrônico, sistemas bancários, ERPs (Enterprise Resource Planning) e mesmo aplicações web complexas, dependem fortemente de modularização para dar suporte à escalabilidade, manutenção e evolução rápida.
+
+Por exemplo, ao desenvolver um sistema bancário, em vez de dividir os módulos conforme as etapas de processamento (entrada de dados, validação, cálculo de juros, geração de relatórios), uma empresa pode identificar decisões de design críticas (como o modelo de dados de contas, políticas de autenticação, regras de negócio específicas) e implementar cada uma delas em módulos isolados. Com isso, mudanças regulatórias podem ser encapsuladas em um único módulo de regras, sem a necessidade de alterar toda a cadeia do programa, simplificando auditorias e atualizações.
+
+Além disso, equipes distribuídas podem trabalhar paralelamente em módulos independentes, eliminando gargalos de comunicação e facilitando testes unitários. A modularização segundo os critérios de Parnas aumenta a flexibilidade para adaptar sistemas legados às novas necessidades do mercado ou às integrações com serviços externos — uma situação muito comum em ambientes empresariais dinâmicos.
+
+\medskip
+
+\noindent\textbf{Conclusão}
+
+O artigo de D. L. Parnas é uma contribuição fundamental para a engenharia de software, especialmente no que diz respeito ao planejamento da arquitetura de sistemas grandes e complexos. Sua ênfase na ocultação de informações e em decisões de design como base para a modularização proporciona maior flexibilidade, compreensibilidade e capacidade de manutenção, características essenciais para o sucesso de projetos em empresas reais.
+
+Hoje, embora as tecnologias e abordagens tenham evoluído, os princípios aqui apresentados permanecem válidos e influenciam diretamente práticas modernas como programação orientada a objetos, desenvolvimento baseado em serviços (SOA) e microserviços. Assim, entender esses critérios é valioso para qualquer profissional que deseje construir sistemas robustos, fáceis de evoluir e de manter.
+
+\vspace{1cm}
+
+\noindent\textbf{Referências}
+
+Parnas, D.L. (1972). On the criteria to be used in decomposing systems into modules. \emph{Communications of the ACM}, 15(12), 1053–1058.
+
+\end{document}
