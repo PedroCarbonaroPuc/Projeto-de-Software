@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+
+\geometry{margin=2.5cm}
+\setstretch{1.5}
+
+\title{Padrão de Projeto Facade}
+\author{Pedro Carbonaro}
+\date{30/03/2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introdução}
+
+No desenvolvimento de software moderno, é comum lidar com sistemas cada vez mais complexos, compostos por diversas classes, bibliotecas e frameworks. Esse aumento de complexidade pode dificultar tanto o entendimento quanto a manutenção do código. Nesse contexto, os padrões de projeto surgem como soluções consolidadas para problemas recorrentes.
+
+O padrão Facade, também conhecido como Fachada, é um padrão estrutural que tem como principal objetivo simplificar a interação com subsistemas complexos. Ele fornece uma interface unificada e de alto nível, escondendo detalhes internos e reduzindo o acoplamento entre o cliente e os componentes do sistema.
+
+\section*{Resumo e principais características}
+
+O Facade atua como um ponto de entrada simplificado para um conjunto de classes mais complexo. Em vez de o cliente interagir diretamente com diversas classes e gerenciar suas dependências, ele utiliza uma única classe que encapsula essa complexidade.
+
+Esse padrão é especialmente útil quando o sistema depende de bibliotecas externas ou frameworks sofisticados, onde o uso direto exigiria conhecimento detalhado da ordem de chamadas e das configurações necessárias.
+
+Uma característica importante do Facade é que ele não adiciona novas funcionalidades ao sistema, mas reorganiza o acesso às funcionalidades existentes. Ele também promove o princípio do baixo acoplamento, pois o cliente passa a depender apenas da fachada, e não dos detalhes internos do subsistema.
+
+Além disso, o Facade pode atuar como um ponto de isolamento, facilitando mudanças futuras. Caso o subsistema seja alterado ou substituído, apenas a implementação da fachada precisa ser ajustada, sem impactar o restante da aplicação.
+
+\section*{Exemplo prático}
+
+Considere um sistema que utiliza uma biblioteca complexa de conversão de vídeo. Essa biblioteca pode envolver diversas classes responsáveis por leitura de arquivos, compressão, conversão de formatos e processamento de áudio.
+
+Sem o uso do padrão Facade, o código cliente precisaria lidar diretamente com todas essas classes, aumentando a complexidade e o risco de erros.
+
+Com a aplicação do padrão, cria-se uma classe \textit{VideoConverter}, que expõe um método simples como \textit{convert(arquivo, formato)}. Internamente, essa classe coordena todas as etapas necessárias, como seleção de codecs, leitura de dados e processamento final.
+
+Dessa forma, o cliente interage com uma interface simples e intuitiva, enquanto a complexidade do sistema permanece encapsulada.
+
+\section*{Aplicação prática em sistemas modernos}
+
+Em ambientes corporativos, o padrão Facade é amplamente utilizado para simplificar integrações com sistemas externos, APIs e serviços de terceiros.
+
+Por exemplo, em um sistema de e-commerce, a integração com gateways de pagamento pode envolver múltiplas etapas, como autenticação, validação de dados, processamento da transação e tratamento de respostas. Utilizando uma fachada, é possível encapsular toda essa lógica em uma única classe, facilitando o uso e reduzindo o acoplamento.
+
+Além disso, o padrão é útil na organização de sistemas em camadas, onde cada camada pode expor uma fachada como ponto de acesso. Isso contribui para uma arquitetura mais limpa e facilita a manutenção e evolução do sistema.
+
+Outro benefício importante é a possibilidade de trabalho em equipe de forma paralela. Enquanto uma equipe mantém o subsistema, outra pode trabalhar apenas com a interface fornecida pela fachada, sem necessidade de conhecer os detalhes internos.
+
+\section*{Vantagens e desvantagens}
+
+Entre as principais vantagens do padrão Facade, destaca-se a redução da complexidade, o desacoplamento entre cliente e subsistema e a melhoria na legibilidade do código. Ele também facilita a manutenção e a substituição de componentes internos.
+
+Por outro lado, o uso inadequado pode levar à criação de classes fachada muito grandes e centralizadas, conhecidas como ``God Objects'', que concentram responsabilidades excessivas. Por isso, é importante manter a fachada coesa e, se necessário, dividi-la em múltiplas fachadas menores.
+
+\section*{Conclusão}
+
+O padrão Facade é uma solução eficiente para lidar com a complexidade inerente a sistemas modernos. Ao fornecer uma interface simplificada para subsistemas complexos, ele melhora a organização do código, reduz o acoplamento e facilita a manutenção.
+
+Seus benefícios são especialmente evidentes em cenários que envolvem integrações com bibliotecas externas ou sistemas complexos, sendo amplamente utilizado em aplicações corporativas. Assim como outros padrões de projeto, seu uso deve ser consciente, garantindo que a simplicidade não venha acompanhada de perda de organização ou excesso de centralização.
+
+\section*{Referências}
+
+Gamma, E.; Helm, R.; Johnson, R.; Vlissides, J. (1994). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.
+
+Refactoring Guru. Facade Pattern. Disponível em: https://refactoring.guru/design-patterns/facade
+
+\end{document}
