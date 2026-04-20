@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{geometry}
+\geometry{margin=2cm}
+
+\title{Resenha sobre Arquitetura de Software e suas Aplicações em Grandes Corporações}
+\author{Pedro Carbonaro}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\large \textbf{(Artigo 7 - Software Architecture A Roadmap)}
+\end{center}
+
+\vspace{0.5cm} % espaço adicional após o subtítulo
+
+\section*{Introdução}
+
+A arquitetura de software constitui o alicerce para o desenvolvimento de sistemas complexos, proporcionando uma visão estruturada das interações e organização dos componentes que o compõem. Conforme destacado por David Garlan, essa disciplina tem evoluído significativamente, sobretudo em grandes empresas, que lidam com sistemas de alta complexidade e volume de dados. A importância de uma arquitetura bem planejada é crucial para garantir requisitos como desempenho, confiabilidade e escalabilidade, aspectos essenciais em corporações globais que operam em ambientes altamente dinâmicos e competitivos.
+
+\section*{Aplicações na Indústria de Grandes Empresas}
+
+Empresas de grande porte, como universidades tecnológicas, multinacionais de tecnologia, bancos e plataformas de comércio eletrônico, enfrentam desafios consideráveis na manutenção de sistemas integrados, seguros e eficientes. A abordagem arquitetônica orientada por linguagem de descrição, conforme mencionado por Garlan, permite essas organizações padronizar suas soluções, facilitar a reusabilidade de componentes e assegurar a compatibilidade entre sistemas distintos ao longo do tempo.
+
+Por exemplo, uma corporação financeira que gerencia múltiplos sistemas de pagamento, análise de risco e clientes pode aplicar conceitos de arquitetura orientada a componentes, utilizando padrões previamente estabelecidos para facilmente adaptar-se às mudanças regulatórias e tecnológicas. A adoção de padrões de arquitetura também viabiliza a integração de novos serviços sem comprometer a estabilidade geral, uma prática que Garlan aponta como fundamental para a evolução das aplicações.
+
+Outro aspecto relevante é o uso de ferramentas de descrição e análise arquitetônica, como as linguagens ADL, que auxiliam na detecção de inconsistências e na validação do sistema antes da implementação. Em empresas de grande escala, onde os custos de erro e retrabalho podem ser astronômicos, esse tipo de ferramenta é indispensável para minimizar riscos e aumentar a eficiência do desenvolvimento.
+
+\section*{Desafios e Perspectivas Futuras}
+
+Os desafios atuais dessas corporações incluem a necessidade de manter a compatibilidade entre sistemas legados e novos, lidar com a crescente demanda por conectividade e segurança, além de responder às rápidas inovações tecnológicas, como computação em nuvem e arquitetura orientada a serviços (SOA). Garlan destaca que o futuro da arquitetura de software será orientado pelo desenvolvimento de técnicas de composição heterogênea, auto-adaptação dos sistemas às mudanças físicas e a certificação de propriedades das integrações.
+
+Para grandes organizações, a tendência de movimentar-se para uma abordagem de arquitetura baseada em padrões e plataformas específicas, como UML, XML, e CORBA, viabiliza a escalabilidade e a interoperabilidade, que são requisitos essenciais para a operação de sistemas distribuídos e colaborativos. Além disso, a evolução das arquiteturas autônomas, capazes de monitorar e ajustar suas próprias configurações, promete aumentar a confiabilidade e reduzir a necessidade de intervenções humanas em ambientes críticos.
+
+\section*{Conclusão}
+
+A disciplina de arquitetura de software, apesar de ainda em desenvolvimento, oferece ferramentas e paradigmas essenciais para que grandes empresas possam construir sistemas mais robustos, escaláveis e adaptáveis às mudanças do mercado. Como enfatiza Garlan, a definição clara, a documentação criteriosa e a análise sistemática dessas arquiteturas são passos fundamentais para transformar sistemas de software em ativos estratégicos e sustentáveis, capazes de suportar a complexidade crescente do mundo digital em que estamos inseridos.
+
+\end{document}
